@@ -4,10 +4,28 @@ import './App.css';
 import Items from './components/Items';
 import Form from './components/Form';
 import Header from './components/Header';
+import Timings from './components/Timings';
 
 class App extends Component {
   state = {
-    items: []
+    items: [
+      // Test array items
+      {
+        id: 1,
+        itemName: 'Chicken',
+        cookingTime: 35
+      },
+      {
+        id: 2,
+        itemName: 'Pizza',
+        cookingTime: 22
+      },
+      {
+        id: 3,
+        itemName: 'Wings',
+        cookingTime: 16
+      }
+    ]
   }
 
   addItem = (event) => {
@@ -21,7 +39,6 @@ class App extends Component {
   }
 
   compare(a, b) {
-    // Use toUpperCase() to ignore character casing
     const itemA = a.cookingTime;
     const itemB = b.cookingTime;
   
@@ -45,6 +62,11 @@ class App extends Component {
             </div>
             <div className="col-sm-4">
               <Items items={this.state.items} />
+            </div>
+          </div>
+          <div className="row pt-1">
+            <div className="col-sm-12">
+              <Timings items={this.state.items} />
             </div>
           </div>
         </div>
