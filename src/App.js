@@ -5,6 +5,7 @@ import Items from './components/Items';
 import Form from './components/Form';
 import Header from './components/Header';
 import Timings from './components/Timings';
+import Footer from './components/Footer';
 
 class App extends Component {
   state = {
@@ -67,6 +68,7 @@ class App extends Component {
           <div className="row pt-1">
             <div className="col-sm-12">
               <Timings items={this.state.items} />
+              <Footer />
             </div>
           </div>
         </div>
