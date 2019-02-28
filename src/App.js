@@ -7,39 +7,34 @@ import Header from './components/Header';
 
 class App extends Component {
   state = {
-    items: [
-      // {
-      //   id: 1,
-      //   itemName: 'Chicken',
-      //   cookingTime: '30'
-      // },
-      // {
-      //   id: 2,
-      //   itemName: 'Pizza',
-      //   cookingTime: '15'
-      // },
-      // {
-      //   id: 3,
-      //   itemName: 'Chips',
-      //   cookingTime: '25'
-      // }
-    ]
+    items: []
   }
 
   addItem = (event) => {
-    console.log("app addItem called")
-    console.log(event)
     this.state.items.push({
       id: Date.now(),
       itemName: event.target.itemName.value,
-      cookingTime: event.target.cookingTime.value
-    })
+      cookingTime: parseInt(event.target.cookingTime.value)
+    });
+    this.state.items.sort(this.compare);
     this.forceUpdate();
-    console.log(this.state.items)
+  }
+
+  compare(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const itemA = a.cookingTime;
+    const itemB = b.cookingTime;
+  
+    let comparison = 0;
+    if (itemA < itemB) {
+      comparison = 1;
+    } else if (itemA > itemB) {
+      comparison = -1;
+    }
+    return comparison;
   }
 
   render() {
-    console.log(this.state.items)
     return (
       <div className="App">
         <div className="container py-3">
