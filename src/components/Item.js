@@ -5,7 +5,8 @@ export class Item extends Component {
         return {
             background: '#f4f4f4',
             borderBottom: '1px #ccc dotted',
-            paddingTop: '20px'
+            paddingTop: '20px',
+            paddingRight: '20px'
         }
     }
 

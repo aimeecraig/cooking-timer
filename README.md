@@ -1,3 +1,6 @@
+# Cooking Timer
+A web application to create multiple countdown timers for oven cooked food.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
