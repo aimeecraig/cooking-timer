@@ -55,8 +55,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container py-3">
-          <div className="row justify-content-center">
+        <div className="container">
+          <div className="row border rounded mt-3 pt-1 pb-3">
             <div className="col-sm-8">
               <Header />
               <Form addItem={this.addItem} />    
@@ -65,11 +65,13 @@ class App extends Component {
               <Items items={this.state.items} />
             </div>
           </div>
-          <div className="row pt-1">
+          <div className="row border rounded mt-3 pt-1">
             <div className="col-sm-12">
               <Timings items={this.state.items} />
-              <Footer />
             </div>
+          </div>
+          <div className="row mt-3">
+              <Footer />
           </div>
         </div>
       </div>

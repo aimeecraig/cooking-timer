@@ -39,6 +39,7 @@ export class Timings extends Component {
                         <Timing key={element.id} item={element} />
                     ))}
                 </ul>
+                <center><h3>Done!</h3></center>
             </div>
         )
     }
